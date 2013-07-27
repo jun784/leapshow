@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Development Team - Tokyo Otaku Mode</title>
+		<title>reveal.js - The HTML Presentation Framework</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -28,11 +28,9 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-		
+
     <script src="http://js.leapmotion.com/0.2.0-beta6/leap.min.js"></script>
     <script>
-  		var myTime;
-
       var controller = new Leap.Controller({ host: '127.0.0.1', port: 6437, enableGestures: true, frameEventName: 'animationFrame' })
       Leap.loop({enableGestures: true}, function(frame) {
         if(frame.gestures.length) {
@@ -40,18 +38,13 @@
                 switch(gesture.type) {
                     case 'swipe':
                         if(gesture.state == "stop") {
-                        	clearTimeout(myTime);
-                        	myTime = setTimeout(function(){
-	                          Reveal.right();
-                        	}, 500);
+                          Reveal.next();
                         }
                         break;
                     case 'circle':
-                    /*
                         if(gesture.state == "stop") {
                           Reveal.toggleOverview();
                         }
-                        */
                         break;
                     case 'screenTap':
                     case 'keyTap':
@@ -68,10 +61,11 @@
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
+
 			<div class="slides">
     <section spellcheck="false" ginger_sofatware_editor="true">
         <h1>DeveLOPMENT TEAM</h1>
-<h2>2013年度 上期目標レビュー</h2>
+<h2>上期レビュー</h2>
 </section>
         <section spellcheck="false" ginger_sofatware_editor="true">
             <h2>上半期目標</h2>
@@ -190,16 +184,12 @@
                 </ul>
             </div>
         </section>
-        <section data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/junkawasaki/images/58700/oofuri3.gif">
-            <h2 style="">
-            	<font color="#ffffff" style="background-color: rgba(255, 153, 0, 0.3);">
-                <span>下半期もがんばります！</span>
-              </font>
-            </h2>
+        <section spellcheck="false" ginger_sofatware_editor="true">
+            <h2>反省点</h2>
         </section>
     </div>
 
-
+		
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
