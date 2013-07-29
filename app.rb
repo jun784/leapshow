@@ -18,13 +18,5 @@ helpers do
 end
 
 get '/' do
-  protect!
-  # 'アクセス制限なし'
-  File.read(File.join('public', 'index.html'));
-end
-
-get '/famous_like_view/index.html' do
-  protect!
-  # 'アクセス制限なし'
   File.read(File.join('public', 'index.html'));
 end
